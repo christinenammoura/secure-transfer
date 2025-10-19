@@ -15,12 +15,11 @@ services:
       - key: PORT
         value: 8080
 
-  - type: web
-    name: secure-transfer-ui
-    env: static
+staticSites:
+  - name: secure-transfer-ui
     rootDir: secure-transfer-ui
     buildCommand: npm ci && npm run build -- --configuration production
-    publishPath: dist/secure-transfer-ui/browser # check angular.json
+    publishPath: dist/secure-transfer-ui/browser # verify in angular.json
     redirects:
       - source: "/*"
         destination: "/index.html"

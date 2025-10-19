@@ -5,7 +5,7 @@ import { environment } from '../../environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class TransferService {
-  private apiUrl = `${environment.apiBaseUrl}/transfers`;
+  private apiUrl = `${environment.apiUrl}/transfers`;
 
   constructor(private http: HttpClient) {}
 

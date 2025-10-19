@@ -25,14 +25,13 @@
             "styles": ["src/styles.css"]
           },
           "configurations": {
-            "fileReplacements": [
-              {
-                "replace": "src/environments/environment.ts",
-                "with": "src/environments/environment.prod.ts"
-              }
-            ],
-
             "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "budgets": [
                 {
                   "type": "initial",

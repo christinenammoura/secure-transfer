@@ -87,13 +87,13 @@ Each user should have one account and sufficient balance to demo transfers.
 
 ## Technologies Used
 
-### Frontend
+## Frontend
 - **Angular** (TypeScript)
 - **RxJS**
 - **Bootstrap / CSS**
 - **Postman** (for API testing)
 
-### Backend
+## Backend
 - **Spring Boot 3 (Java 17)**
 - **Spring Security (JWT + BCrypt)**
 - **Spring Data JPA**
@@ -101,7 +101,7 @@ Each user should have one account and sufficient balance to demo transfers.
 - **PostgreSQL (Supabase)**
 - **Render (Docker deployment)**
 
-### Database
+## Database
 
 - **Provider: Supabase**
 - **Type: PostgreSQL**
@@ -242,5 +242,6 @@ curl -X POST https://secure-transfer-0u86.onrender.com/api/transfers \
 - CORS error from browser
 - Set APP_CORS_ALLOWED_ORIGIN=https://secure-transfer-ui.onrender.com on backend service.
 - In Spring Security config, ensure http.cors() and a CorsConfigurationSource bean are present.
+
 
 

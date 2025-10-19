@@ -1,0 +1,35 @@
+<div class="transfer-container">
+  <div class="transfer-card">
+    <h2>Funds Transfer</h2>
+    <p>Welcome, {{ username }}!</p>
+    <p>Current Balance: ${{ balance }}</p>
+
+    <form (ngSubmit)="onSubmit()" #transferForm="ngForm">
+      <div class="form-group">
+        <input
+          type="text"
+          name="recipient"
+          placeholder="Recipient Account Number"
+          [(ngModel)]="recipientAccount"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <input
+          type="number"
+          name="amount"
+          placeholder="Amount"
+          [(ngModel)]="amount"
+          min="1"
+          required
+        />
+      </div>
+
+      <button type="submit" class="btn-transfer">Submit Transfer</button>
+    </form>
+
+    <p class="success" *ngIf="successMessage">{{ successMessage }}</p>
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+  </div>
+</div>

@@ -16,9 +16,9 @@ Hosting: Render (backend as Web Service, frontend as Static Site)
 ----
 ## Live Demo
 
--**Frontend:** [https://secure-transfer-ui.onrender.com] https://secure-transfer-ui.onrender.com
+-**Frontend:** [https://secure-transfer-ui.onrender.com] 
 
--**Backend API:** [https://secure-transfer-0u86.onrender.com] https://secure-transfer-0u86.onrender.com
+-**Backend API:** [https://secure-transfer-0u86.onrender.com]
 
 ----
 
@@ -242,4 +242,5 @@ curl -X POST https://secure-transfer-0u86.onrender.com/api/transfers \
 - CORS error from browser
 - Set APP_CORS_ALLOWED_ORIGIN=https://secure-transfer-ui.onrender.com on backend service.
 - In Spring Security config, ensure http.cors() and a CorsConfigurationSource bean are present.
+
 

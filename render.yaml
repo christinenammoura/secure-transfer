@@ -6,19 +6,21 @@ services:
     autoDeploy: true
     healthCheckPath: /actuator/health
     envVars:
-  - key: SPRING_DATASOURCE_URL
-    sync: false # set this value in the Render dashboard
-  - key: SPRING_DATASOURCE_USERNAME
-    sync: false
-  - key: SPRING_DATASOURCE_PASSWORD
-    sync: false
+      - key: SPRING_DATASOURCE_URL
+        sync: false # set this value in the Render dashboard
+      - key: SPRING_DATASOURCE_USERNAME
+        sync: false
+      - key: SPRING_DATASOURCE_PASSWORD
+        sync: false
+      - key: PORT
+        value: 8080
 
   - type: static
     name: secure-transfer-ui
     rootDir: secure-transfer-ui
     buildCommand: npm ci && npm run build -- --configuration production
-    publishPath: dist/secure-transfer-ui/browser # or dist/APP-NAME (check angular.json)
+    publishPath: dist/secure-transfer-ui/browser # check angular.json
     redirects:
-      - source: '/*'
-        destination: '/index.html'
+      - source: "/*"
+        destination: "/index.html"
         status: 200
